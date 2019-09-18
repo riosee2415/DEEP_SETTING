@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="COMMON">
+
+
+	<!-- 공통코드를 얻어오는 쿼리 -->
+	<select id="GET_CODE_DATA" resultType="commonVO" parameterType="map">
+		SELECT 	UP_CD,
+				CODE,
+        		DATA
+		  FROM	COMMON
+		 WHERE	UP_CD = #{UP_CD}
+		   AND  DATA NOT LIKE '%공지%'
+ 		 ORDER  BY CODE
+	</select>
+	
+	
+	<!-- 공통코드 디테일을 얻어오는 쿼리 -->
+	<select id="GET_CODE_DETAIL" resultType="commonVO" parameterType="map">
+		SELECT 	UP_CD,
+				CODE,
+        		DATA
+		  FROM	COMMON
+		 WHERE	UP_CD = #{UP_CD}
+ 		   AND  CODE  = #{CODE}
+	</select>
+
+</mapper>

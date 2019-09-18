@@ -1,5 +1,9 @@
 package com.deep.test;
 
+/**
+ * @author sanghoyun
+ *
+ */
 public class TestVO {
 	
 	private String uid;

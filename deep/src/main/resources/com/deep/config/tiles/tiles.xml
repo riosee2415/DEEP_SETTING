@@ -10,6 +10,7 @@
            <put-attribute name="content" value=""/>
         </definition> 
         
+        <!-- TEST AREA -->
         
         <definition name="helloTiles" extends="layout">
            <put-attribute name="content" value="/WEB-INF/views/template/hello.jsp"/>
@@ -17,5 +18,33 @@
         
       
         
+        <!-- PROJECT AREA -->
+        
+       
+        
+        <!-- DASHBOARD -->
+         <definition name="dashboard" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/dashboard/main.jsp"/>
+        </definition>
+        
+         <!-- MYPAGE -->
+         <definition name="myPage" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/user/myPage.jsp"/>
+        </definition>
+        
+        <!-- SUBJECTLIST -->
+         <definition name="subjectList" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/subject/subjectList.jsp"/>
+        </definition>
+        
+          <!-- FREEBOARD -->
+         <definition name="freeBoard" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/board/freeBoard.jsp"/>
+        </definition>
+        
+          <!-- BOARDWRITE -->
+         <definition name="writeBoard" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/board/writeBoard.jsp"/>
+        </definition>
         
 </tiles-definitions>

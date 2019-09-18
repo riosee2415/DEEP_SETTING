@@ -7,9 +7,14 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @author sanghoyun
+ *
+ */
 @RequestMapping("test")
 @Controller
-public class TestController {
+public class TestController 
+{
 
 	
 	@Resource(name = "testDao")
