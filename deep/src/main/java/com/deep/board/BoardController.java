@@ -70,6 +70,39 @@ public class BoardController {
 	
 	/**
 	 * @Author : DEV_YUN
+	 * @return : issueBoard (tiles)
+	 * @description : page move freeBoard
+	 */
+	@RequestMapping(path = "/issueBoard", method=RequestMethod.GET)
+	public String issueBoardPage(Model model, HttpServletRequest request)
+	{
+		String page = request.getParameter("page");
+		logger.debug("parent pagenation : {}" , page);
+		
+		PagingVO pVO = new PagingVO();
+		pVO.setPage((Integer.parseInt(page) - 1) * 10);
+		pVO.setPageLimit(10);
+	
+		Map<String, Object> param = new HashMap();
+		param.put("boardType", "3");
+		param.put("page", pVO.getPage());
+		param.put("lastPage", pVO.getPageLimit());
+		
+		List<BoardVO> list = bService.getBoardList(param);
+		
+		int pageSize = bService.getBoardCount(param);
+		pageSize = (pageSize % pVO.getPageLimit() > 0) ? pageSize / pVO.getPageLimit() + 1 : pageSize / pVO.getPageLimit(); 
+		
+		model.addAttribute("boardList", list);
+		model.addAttribute("pageSize", pageSize);
+		
+		return "issueBoard";
+	}
+	
+	
+	
+	/**
+	 * @Author : DEV_YUN
 	 * @return : freeBoard (tiles)
 	 * @description : page move freeBoard
 	 */
@@ -85,6 +118,38 @@ public class BoardController {
 	
 		Map<String, Object> param = new HashMap();
 		param.put("boardType", "2");
+		param.put("page", pVO.getPage());
+		param.put("lastPage", pVO.getPageLimit());
+		
+		List<BoardVO> list = bService.getBoardList(param);
+		
+		int pageSize = bService.getBoardCount(param);
+		pageSize = (pageSize % pVO.getPageLimit() > 0) ? pageSize / pVO.getPageLimit() + 1 : pageSize / pVO.getPageLimit(); 
+		
+		model.addAttribute("boardList", list);
+		model.addAttribute("pageSize", pageSize);
+		model.addAttribute("page", page);
+		
+		return "board/boardList_ajax";
+	}
+	
+	/**
+	 * @Author : DEV_YUN
+	 * @return : freeBoard (tiles)
+	 * @description : page move freeBoard
+	 */
+	@RequestMapping(path = "getIssueList_ajax")
+	public String getIssueList_ajax(Model model, HttpServletRequest request)
+	{
+		String page = request.getParameter("page");
+		logger.debug("parent pagenation : {}" , page);
+		
+		PagingVO pVO = new PagingVO();
+		pVO.setPage((Integer.parseInt(page) - 1) * 10);
+		pVO.setPageLimit(10);
+	
+		Map<String, Object> param = new HashMap();
+		param.put("boardType", "3");
 		param.put("page", pVO.getPage());
 		param.put("lastPage", pVO.getPageLimit());
 		

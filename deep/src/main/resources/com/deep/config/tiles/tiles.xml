@@ -37,14 +37,19 @@
            <put-attribute name="content" value="/WEB-INF/views/subject/subjectList.jsp"/>
         </definition>
         
-          <!-- FREEBOARD -->
+         <!-- FREEBOARD -->
          <definition name="freeBoard" extends="layout">
            <put-attribute name="content" value="/WEB-INF/views/board/freeBoard.jsp"/>
         </definition>
         
-          <!-- BOARDWRITE -->
+         <!-- BOARDWRITE -->
          <definition name="writeBoard" extends="layout">
            <put-attribute name="content" value="/WEB-INF/views/board/writeBoard.jsp"/>
         </definition>
         
+        
+        <!-- ISSUEBOARD -->
+         <definition name="issueBoard" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/board/issueBoard.jsp"/>
+        </definition>
 </tiles-definitions>
