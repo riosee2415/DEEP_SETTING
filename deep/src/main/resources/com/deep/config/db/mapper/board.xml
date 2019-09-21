@@ -10,11 +10,11 @@
 		SELECT	BOARD_UID, 
 				BOARD_TITLE,
 		        BOARD_CONTENTS,
-		        BOARD_AUTHOR,
+		        USER_UID,
 		        BOARD_HIT,
 		        BOARD_TIME
 		  FROM	BOARD
-		 WHERE	BOARD_TYPE = #{boardType}
+		 WHERE	TYPE_UID = #{boardType}
 		 ORDER	BY BOARD_UID DESC
 		 LIMIT  #{page}, #{lastPage}
 		 
@@ -25,17 +25,17 @@
 	<select id="GET_BOARD_COUNT" resultType="java.lang.Integer" parameterType="map">
 		SELECT	COUNT(*)
 		  FROM	BOARD
-		 WHERE	BOARD_TYPE = #{boardType}
+		 WHERE	TYPE_UID = #{boardType}
 	</select>
 	
 	
 	<insert id="INSERT_BOARD_CONTENTS" parameterType="map">
 		INSERT INTO BOARD 
 		(
-			BOARD_TYPE, 
+			TYPE_UID, 
 			BOARD_TITLE, 
 		    BOARD_CONTENTS, 
-		    BOARD_AUTHOR, 
+		    USER_UID, 
 		    BOARD_HIT, 
 		    BOARD_TIME
 		) 

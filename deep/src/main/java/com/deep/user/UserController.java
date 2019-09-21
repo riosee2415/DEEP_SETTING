@@ -90,7 +90,7 @@ public class UserController {
 
 			session.setAttribute("userId", list.get(0).getId());
 			session.setAttribute("userName", list.get(0).getName());
-			session.setAttribute("userPass", list.get(0).getPass());
+			session.setAttribute("userPass", list.get(0).getPassword());
 			session.setAttribute("userSchool", list.get(0).getSchool());
 			session.setAttribute("userMobile", list.get(0).getMobile());
 			session.setAttribute("userBirth", list.get(0).getBirth());

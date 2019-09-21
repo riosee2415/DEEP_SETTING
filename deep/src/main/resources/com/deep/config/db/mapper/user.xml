@@ -7,7 +7,7 @@
 	<select id="USERCHECK" resultType="userVO" parameterType="map">
         SELECT  UID,
                 ID,
-                PASS,
+                PASSWORD,
                 NAME,
                 SCHOOL,
                 MOBILE,
@@ -19,7 +19,7 @@
                 EMAIL
           FROM  USER
          WHERE  ID   = #{userId}
-           AND  PASS = #{userPass}
+           AND  PASSWORD = #{userPass}
 	</select>
 	
 	<update id="UPDATE_USER" parameterType="map">
