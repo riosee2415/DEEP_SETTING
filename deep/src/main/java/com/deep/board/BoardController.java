@@ -207,7 +207,7 @@ public class BoardController {
 								,@RequestParam("write_boardType")String boardType
 								,@RequestParam("write_boardTitle")String boardTitle
 								,@RequestParam("write_contents")String boardContents
-								,@RequestParam("write_id")String userId
+								,@RequestParam("write_userId")String userId
 								,HttpServletRequest request)
 	{
 		// INSERT DATA TEMPRARY

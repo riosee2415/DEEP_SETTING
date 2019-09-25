@@ -51,7 +51,7 @@
 		    ,(
 		    	SELECT 	UID
 		    	  FROM	USER
-		    	 WHERE	ID = 'admin1'
+		    	 WHERE	ID = #{userId}
 		    )
 		    ,0
 		    ,SYSDATE()

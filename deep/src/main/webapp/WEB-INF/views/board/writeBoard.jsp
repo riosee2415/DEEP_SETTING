@@ -62,7 +62,8 @@
 				</tr>
 			</table>
 			
-				
+			<input type="hidden" id="write_userId" name="write_userId" value="${userId }"/>
+			
 			<div style="float: right;">
 				<button type="button" class="btn btn-warning btn-sm" onclick="history.back(-1);">돌아가기</button>
 				<button type="submit" class="btn btn-info btn-sm" >작성</button>
