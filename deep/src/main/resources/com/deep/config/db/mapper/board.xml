@@ -7,13 +7,17 @@
 
 	<!-- BOARDTYPE별 게시글 조회하기 -->
 	<select id="GET_BOARD_LIST" resultType="boardVO" parameterType="map">
-		SELECT	BOARD_UID, 
-				BOARD_TITLE,
-		        BOARD_CONTENTS,
-		        USER_UID,
-		        BOARD_HIT,
-		        BOARD_TIME
-		  FROM	BOARD
+		SELECT	A.BOARD_UID
+				,A.BOARD_TITLE
+		        ,A.BOARD_CONTENTS
+	        	,(
+		       		SELECT  ID
+		       		  FROM  USER
+		       		 WHERE	UID = A.USER_UID
+		       	) AS BOARD_AUTHOR
+		        ,A.BOARD_HIT
+		        ,A.BOARD_TIME
+		  FROM	BOARD	A
 		 WHERE	TYPE_UID = #{boardType}
 		 ORDER	BY BOARD_UID DESC
 		 LIMIT  #{page}, #{lastPage}
@@ -32,21 +36,25 @@
 	<insert id="INSERT_BOARD_CONTENTS" parameterType="map">
 		INSERT INTO BOARD 
 		(
-			TYPE_UID, 
-			BOARD_TITLE, 
-		    BOARD_CONTENTS, 
-		    USER_UID, 
-		    BOARD_HIT, 
-		    BOARD_TIME
+			TYPE_UID
+			,BOARD_TITLE
+		    ,BOARD_CONTENTS
+		    ,USER_UID
+		    ,BOARD_HIT
+		    ,BOARD_TIME
 		) 
 		VALUES 
 		(
-			#{boardType}, 
-		    #{boardTitle},
-		    #{boardContents}, 
-		    #{userId}, 
-		    0,
-		    SYSDATE()
+			#{boardType}
+		    ,#{boardTitle}
+		    ,#{boardContents} 
+		    ,(
+		    	SELECT 	UID
+		    	  FROM	USER
+		    	 WHERE	ID = 'admin1'
+		    )
+		    ,0
+		    ,SYSDATE()
 		)
 	</insert>
 	

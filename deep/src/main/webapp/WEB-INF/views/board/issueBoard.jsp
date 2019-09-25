@@ -15,7 +15,7 @@
 
 	<div class="col-md-8">
 		<br />
-		<h3>이슈</h3>
+		<h3>개발자 이슈 게시판</h3>
 		<p style="margin-bottom: 10px;" class="bg-success">자유로운 글을 작성하여 소통하는 게시판 입니다.
 							<br />비방, 비판 및 욕설 그리고 홍보에 대한 글과 댓글을 작성할 경우 사용이 정지될 수 있습니다. </p>
 		<br />
