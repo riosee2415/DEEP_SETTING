@@ -1,130 +1,116 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
-
-	
-	<div class="row">
-		<br /> <br /> <br />
-		<div class="col-md-2">
-		</div>	
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/myPage.css">
 
 
-		<div class="col-md-8">
-			<form id="frm1" action="${pageContext.request.contextPath }/user/updateUserInfo" method="POST">
-				<table class="table table-condensed">
-					<tr>
-						<td><font color="#FF0000">*ID</font></td>
-						<td>
-							<input class="form-control" type="text" id="userId" name="userId" value="${userId}" readonly/>
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>NAME</td>
-						<td>
-							<input class="form-control" type="text" id="userName" name="userName" value="${userName}"/>
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td><font color="#FF0000">*PASSWORD</font></td>
-						<td>
-							<input class="form-control" type="password" id="userPass" name="userPass" value="${userPass}" readonly/>
-						</td>
-						<td></td>
-					</tr>
-				
-					<tr>
-						<td>SCHOOL</td>
-						<td>
-							<select class="form-control" id="userSchool" name="userSchool">
-								<c:forEach items="${SC001}" var="CODE">
-									<option value="${CODE.code}">${CODE.data}</option>
-								</c:forEach>
-							</select>
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>MOBILE</td>
-						<td>
-							<input class="form-control" type="text" id="userMobile" name="userMobile" value="${userMobile}" />
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>BIRTH</td>
-						<td>
-							<input class="form-control" type="date" id="userBirth" name="userBirth" value="${userBirth}" />
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>YEAR</td>
-						<td>
-							<select class="form-control" id="userYear" name="userYear" >
-								<option value="1"> 1학년 </option>
-								<option value="2"> 2학년 </option>
-								<option value="3"> 3학년 </option>
-							</select>		
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>EMAIL</td>
-						<td>
-							<input class="form-control" type="text" id="userEmail" name="userEmail" value="${userEmail}" />
-						</td>
-						<td></td>
-					</tr>
-					
-					<tr>
-						<td>ZIPCODE</td>
-						<td>
-							<input class="form-control" type="text" id="userZipcode" name="userZipcode" value="${userZipcode}" />
-						</td>
-						<td><button type="button" class="btn btn-default" onclick="addAPI()" >검색</button></td>
-						
-					</tr>
-					
-					<tr>
-						<td>ADD1</td>
-						<td colspan="2">
-							<input class="form-control" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" />
-						</td>
-					</tr>
-					<tr>
-						<td>ADD2</td>
-						<td colspan="2">
-							<input class="form-control" type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
-						</td>
-					</tr>
-					
-				</table>
-			
-			</div>	
 
-			<div class="col-md-2">
-			</div>	
-		</div> <!-- row1 end -->
+<form id="frm1" action="${pageContext.request.contextPath }/user/updateUserInfo" method="POST">
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">ID</span>
+			<input type="text" id="userId" name="userId" value="${userId}" readonly/>
+		</div>
 		
-		<div class="row">
-			<div class="col-md-8">
-			</div>
-			
-			<div class="col-md-4">
-				<button type="button" class="btn btn-info" onclick="updateBtn()">확인</button>
-			</div>
-		</form>
-	</div> <!-- row2 end -->
+		<div class="user__column">
+			<span class="user__column-data">NAME</span>
+			<input type="text" id="userName" name="userName" value="${userName}"/>
+		</div>
+	</div>
+
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">PASSWORD</span>
+			<input type="password" id="userPass" name="userPass" value="${userPass}" readonly/>
+		</div>
+		
+		<div class="user__column">
+			<span class="user__column-data">SCHOOL</span>
+			<select id="userSchool" name="userSchool">
+				<c:forEach items="${SC001}" var="CODE">
+					<option value="${CODE.code}">${CODE.data}</option>
+				</c:forEach>
+			</select>
+		</div>
+	</div>
+
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">MOBILE</span>
+			<input type="text" id="userMobile" name="userMobile" value="${userMobile}" />
+		</div>
+		
+		<div class="user__column">
+			<span class="user__column-data">BIRTH</span>
+			<input type="date" id="userBirth" name="userBirth" value="${userBirth}" />
+		</div>
+	</div>
 	
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">YEAR</span>
+			<select id="userYear" name="userYear" >
+				<option value="1"> 1학년 </option>
+				<option value="2"> 2학년 </option>
+				<option value="3"> 3학년 </option>
+			</select>		
+		</div>
+		
+		<div class="user__column">
+			<span class="user__column-data">EMAIL</span>
+			<input type="text" id="userEmail" name="userEmail" value="${userEmail}" />
+		</div>
+	</div>
+	
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">ZIPCODE</span>
+			<input type="text" id="userZipcode" name="userZipcode" value="${userZipcode}" />
+			<button type="button" class="btn btn-default" onclick="addAPI()" >검색</button>
+		</div>
+		
+		<div class="user__column">
+			
+		</div>
+	</div>
+	
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">ADDRESS</span>
+			<input type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" />
+		</div>
+		
+		<div class="user__column">
+			
+		</div>
+	</div>
+
+	<div class="user">
+		<div class="user__column">
+			<span class="user__column-data">ADDRESS_2</span>
+			<input type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
+		</div>
+		
+		<div class="user__column">
+			
+		</div>
+	</div>
+	
+	
+	
+
+	<div class="btnArea">
+		<button type="button" class="btn btn-info" onclick="updateBtn()">확인</button>
+		
+	</div>
+</form>
+
+
+
+
+<!-- //==================================== -->
+
 	
 <script>
 

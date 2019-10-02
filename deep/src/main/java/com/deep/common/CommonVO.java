@@ -8,8 +8,16 @@ public class CommonVO {
 	
 	private String code;
 	private String data;
+	private String img_logo;
 	
 	
+	
+	public String getImg_logo() {
+		return img_logo;
+	}
+	public void setImg_logo(String img_logo) {
+		this.img_logo = img_logo;
+	}
 	public String getCode() {
 		return code;
 	}

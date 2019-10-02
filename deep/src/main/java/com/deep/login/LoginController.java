@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.deep.common.CommonVO;
+import com.deep.dashboard.DashBoardService;
 import com.deep.user.UserVO;
 
 /**
@@ -30,6 +32,8 @@ public class LoginController
 	@Resource(name = "loginService")
 	private LoginService lService;
 	
+	@Resource(name = "dashBoardService")
+	private DashBoardService dService;
 	
 	/**
 	 * @Author 		: DEV_YUN
@@ -62,6 +66,10 @@ public class LoginController
 		
 		List<UserVO> list = lService.userCheck(param);
 		
+		//CommonVO vo = dService.getLogoImg();
+		
+		//String imgInfo = vo.getImg_logo();
+		
 		if(list.size() > 0 )
 		{
 			logger.debug("ready send to main Page : {}", list.get(0).getId());
@@ -77,7 +85,7 @@ public class LoginController
 			session.setAttribute("userAdd1", list.get(0).getAdd1());
 			session.setAttribute("userAdd2", list.get(0).getAdd2());
 			
-			
+			//model.addAttribute("imgInfo", imgInfo);
 			
 			return moveDashboard();
 		}

@@ -26,5 +26,11 @@
 		 WHERE	UP_CD = #{UP_CD}
  		   AND  CODE  = #{CODE}
 	</select>
+	
+	<!-- 공통코드 디테일을 얻어오는 쿼리 -->
+	<select id="GET_LOGO_IMG" resultType="commonVO">
+		SELECT 	CONCAT(LOGO_PATH, LOGO_NAME) AS IMG_LOGO
+		  FROM	LOGO
+	</select>
 
 </mapper>

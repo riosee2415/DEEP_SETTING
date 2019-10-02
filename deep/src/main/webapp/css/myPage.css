@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+.user__column {
+    display: inline;
+    width: 50%;
+    padding-top: 15px;
+}
