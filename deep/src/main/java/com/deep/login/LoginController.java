@@ -87,7 +87,7 @@ public class LoginController
 			session.setAttribute("userAdd1", list.get(0).getAdd1());
 			session.setAttribute("userAdd2", list.get(0).getAdd2());
 			
-			//model.addAttribute("imgInfo", imgInfo);
+			model.addAttribute("images", list2);
 			
 			return moveDashboard();
 		}

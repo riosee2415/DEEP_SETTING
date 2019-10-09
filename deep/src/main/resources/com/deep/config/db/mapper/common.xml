@@ -27,7 +27,7 @@
  		   AND  CODE  = #{CODE}
 	</select>
 	
-	<!-- 공통코드 디테일을 얻어오는 쿼리 -->
+	<!-- 공통코드 로그인 시 배경로고 로드 -->
 	<select id="GET_LOGO_IMG" resultType="logoVO">
 		SELECT 	UID,
 				LOGO_PATH,
