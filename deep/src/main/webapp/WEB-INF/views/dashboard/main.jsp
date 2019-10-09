@@ -6,12 +6,11 @@
 a {text-decoration :none;}
 ul {list-style:none;}
 a, button {border:0; outline:0;}
-h2{ background-image: url("../main/webapp/img/logo.png"); position: absolute; z-index:99; width: 700px; height: 150px; }
-.wrap{width: 100%; height: 100%; }
-.page { clear:both; width: 100%; height:100%;  }
+.wrap{width: 100%; height: 100%; overflow: hidden;}
+.page { clear:both; width: 100%; height:100%;}
 .page_wrap {  width: 100%;  }  
 #page1{width: 100%; height: 100%; }
-.vs { width: 100vw; height: 700px; position: relative;}
+.vs { width: 100vw; height: 710px; position: relative; }
 .banner_box { width: 400%; height: 700px;  overflow: hidden;}
 .banner_box img { display: block; width: 25%; height: 700px; float: left; transition: 0.5s;}
 .thum_lst li { float: left; width: 300px; margin-left: 80px; overflow: hidden; height: 300px; margin-top: 60px; position: relative; left: 14%;}
@@ -20,14 +19,11 @@ h2{ background-image: url("../main/webapp/img/logo.png"); position: absolute; z-
 .lst_tit{ padding: 10px;}
 .lst_com{ padding: 10px;}
 .go { display:block; width:120px; height: 40px; border:2px solid #333; color:#333; text-align:center; line-height: 35px; margin : 0 60px; overflow-y: hidden;} 
-
-
 </style>
 <div class="wrap">
 <div class="page_wrap">
 	<div class="page" id="page1">
         <figure class="vs">
-                
                 <ul class="banner_box">
                 	<c:forEach items="${images }" var="image">
 	                    <li><img src="${pageContext.request.contextPath }/${image.logo_path}/${image.logo_name}" alt="배너1" class="banner_pic1"></li>                	
