@@ -6,7 +6,6 @@ public class LogoVO {
 	private String logo_path;
 	private String logo_name;
 	
-	
 	public String getUid() {
 		return uid;
 	}
