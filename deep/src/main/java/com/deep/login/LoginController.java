@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.deep.common.CommonVO;
 import com.deep.dashboard.DashBoardService;
+import com.deep.dashboard.LogoVO;
 import com.deep.user.UserVO;
 
 /**
@@ -66,9 +67,10 @@ public class LoginController
 		
 		List<UserVO> list = lService.userCheck(param);
 		
-		//CommonVO vo = dService.getLogoImg();
+		List<LogoVO> list2 = dService.getLogoImg();
 		
-		//String imgInfo = vo.getImg_logo();
+		logger.debug("MAIN LOGO PRINT : {}" , list2.get(0).getLogo_path());
+		logger.debug("MAIN LOGO PRINT : {}" , list2.get(0).getLogo_name());
 		
 		if(list.size() > 0 )
 		{

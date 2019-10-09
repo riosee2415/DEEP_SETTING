@@ -8,6 +8,7 @@
 		   	<typeAlias  alias="userVO" type="com.deep.user.UserVO"/>
 		   	<typeAlias  alias="commonVO" type="com.deep.common.CommonVO"/>
 		   	<typeAlias  alias="boardVO" type="com.deep.board.BoardVO"/>
+		   	<typeAlias  alias="logoVO" type="com.deep.dashboard.LogoVO"/>
 	  </typeAliases>
 	  <mappers>
 	  		<mapper resource="com/deep/config/db/mapper/test.xml"/>

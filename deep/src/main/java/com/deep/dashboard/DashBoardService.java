@@ -1,10 +1,11 @@
 package com.deep.dashboard;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.deep.common.CommonVO;
 
 @Service("dashBoardService")
 public class DashBoardService {
@@ -12,7 +13,7 @@ public class DashBoardService {
 	@Resource(name = "dashBoardDao")
 	private DashBoardDao dDao;
 	
-	public CommonVO getLogoImg()
+	public List<LogoVO> getLogoImg()
 	{
 		return dDao.getLogoImg();
 	}

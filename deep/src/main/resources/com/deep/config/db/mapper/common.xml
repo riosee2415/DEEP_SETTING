@@ -28,8 +28,10 @@
 	</select>
 	
 	<!-- 공통코드 디테일을 얻어오는 쿼리 -->
-	<select id="GET_LOGO_IMG" resultType="commonVO">
-		SELECT 	CONCAT(LOGO_PATH, LOGO_NAME) AS IMG_LOGO
+	<select id="GET_LOGO_IMG" resultType="logoVO">
+		SELECT 	UID,
+				LOGO_PATH,
+				LOGO_NAME
 		  FROM	LOGO
 	</select>
 

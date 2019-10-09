@@ -1,14 +1,12 @@
 package com.deep.dashboard;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import javax.annotation.Resource;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.deep.common.CommonVO;
 
 @Repository("dashBoardDao")
 public class DashBoardDao {
@@ -17,13 +15,13 @@ public class DashBoardDao {
     private SqlSessionTemplate sqlSessionTemplate;
 
 	
-	public CommonVO getLogoImg()
+	public List<LogoVO> getLogoImg()
 	{
 		
-		String queryId = "USER.USERCHECK";
+		String queryId = "COMMON.GET_LOGO_IMG";
 		
-		CommonVO vo = sqlSessionTemplate.selectOne(queryId);
+		List<LogoVO> list = sqlSessionTemplate.selectList(queryId);
 				
-		return vo;
+		return list;
 	}
 }
