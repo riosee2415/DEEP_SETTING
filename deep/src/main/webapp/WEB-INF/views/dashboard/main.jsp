@@ -25,9 +25,10 @@ a, button {border:0; outline:0;}
 	<div class="page" id="page1">
         <figure class="vs">
                 <ul class="banner_box">
-                	<c:forEach items="${images }" var="image">
+                <%-- 	<c:forEach items="${images }" var="image">
 	                    <li><img src="${pageContext.request.contextPath }/${image.logo_path}/${image.logo_name}" alt="배너1" class="banner_pic1"></li>                	
-                	</c:forEach>
+                	</c:forEach> --%>
+                	<li><img src="${pageContext.request.contextPath }/${bgPath}/${bgName}" alt="배너1" class="banner_pic1"></li> 
                 </ul>
                 
             </figure>

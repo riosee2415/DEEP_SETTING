@@ -89,6 +89,9 @@ public class LoginController
 			
 			model.addAttribute("images", list2);
 			
+			session.setAttribute("bgPath", list2.get(0).getLogo_path());
+			session.setAttribute("bgName", list2.get(0).getLogo_name());
+			
 			return moveDashboard();
 		}
 		else 
