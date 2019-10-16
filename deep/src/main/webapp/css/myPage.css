@@ -3,11 +3,20 @@
 }
 
 
-.info{
-	margin-left: 300px;
-	margin-right: 400px;
+.info input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
 }
 
+.info select {
+	width: 30%;
+}
+
+.info {
+  margin-left: 200px;
+  margin-right: 300px;
+}
 
 .user {
   display: flex;
@@ -21,7 +30,6 @@
   display: flex;
   width: 50%;
   padding-top: 15px;
-  
 }
 
 .user__column .user__column-data {
@@ -31,4 +39,26 @@
   margin-right: 50px;
   line-height: 35px;
   text-align: center;
+  color: #636e72;
+}
+
+.user__column .user__column-add {
+	width: 80%;
+	margin-left: 18px;
+}
+
+.btnArea {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form .saveUser{
+	border: none;
+	background-color: #74b9ff;
+	color: white;
+	margin-top: 30px;
+	padding: 10px 40px;
+	border-radius: 5px;
 }
