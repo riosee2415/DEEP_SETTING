@@ -63,6 +63,34 @@ a, button {border:0; outline:0;}
             </ul>
         </section>
     </div>
+    <div class="page" id="page2">
+        <section class="page_wrap">
+            <h2 class="page_tit1"></h2>
+            <ul class="thum_lst">
+                <li class="col4">
+                    <a href="" >
+                        <h4 class="cate_tit">title</h4>
+                        <p class="lst_com">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, molestias!</p>
+                        <span class="go">이동하기</span> 
+                    </a>
+                </li>
+                <li class="col4">
+                    <a href="">
+                        <h4 class="cate_tit">title</h4>
+                        <p class="lst_com">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, natus!</p>
+                        <span class="go">이동하기</span> 
+                   </a>
+                </li>
+                <li class="col4">
+                    <a href="" >
+                        <h4 class="cate_tit">title</h4>
+                        <p class="lst_com">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, alias?</p>
+                        <span class="go">이동하기</span> 
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
 
 </div>
 </div>

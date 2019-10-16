@@ -66,7 +66,7 @@
 
 			<div class="user__column">
 				<div class="user__column-data">EMAIL</div>
-				<input type="text" id="userEmail" name="userEmail"
+				<input type="email" id="userEmail" name="userEmail"
 					value="${userEmail}" />
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 		<div class="user">
 			<div class="user__column">
 				<div class="user__column-data">ADDRESS</div>
-				<input type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" />
+				<input class="user__column-add" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" />
 			</div>
 
 			<div class="user__column"></div>
@@ -95,14 +95,14 @@
 		<div class="user">
 			<div class="user__column">
 				<div class="user__column-data">ADDRESS_2</div>
-				<input type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
+				<input class="user__column-add" type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
 			</div>
 
 			<div class="user__column"></div>
 		</div>
 
 		<div class="btnArea">
-			<button type="button" class="btn btn-info" onclick="updateBtn()">
+			<button type="button" class="saveUser" onclick="updateBtn()">
 				확인</button>
 		</div>
 	</form>
@@ -112,16 +112,8 @@
 
 <script>
 	$(document).ready(function() {
-		var userYear = $
-		{
-			userYear
-		}
-		;
-		var userSchool = $
-		{
-			userSchool
-		}
-		;
+		var userYear = ${userYear};
+		var userSchool = ${userSchool};
 
 		// #userYear set userYear data in session
 		$("#userYear").val(userYear).prop("selected", true);
