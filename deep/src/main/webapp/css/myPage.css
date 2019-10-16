@@ -19,6 +19,7 @@ body {
 	margin-left: 45%;
 }
 
+
 ul {
 	display: block;
 	margin-bottom: 20px;
@@ -32,9 +33,20 @@ ul {
 	vertical-align: middle;
 }
 
+.userInfo ul li {
+	padding: 3px 0px;	
+}
+
 .userInfo ul li input,
 .userInfo ul li select {
 	width: 350px;
-	height: 30px;
-	border-radius: 
+	height: 30px;	
+}
+
+.userInfo ul li input {
+	border: none;
+	border-radius: 15px;
+	padding-left: 20px;
+	padding-top : 5px;
+	box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.24);
 }
