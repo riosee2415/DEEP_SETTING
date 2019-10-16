@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <style>
 *{padding:0; margin:0; }
 a {text-decoration :none;}
@@ -34,27 +35,28 @@ a, button {border:0; outline:0;}
             </figure>
 	</div>
     <div class="page" id="page2">
+    
         <section class="page_wrap">
             <h2 class="page_tit1"></h2>
             <ul class="thum_lst">
                 <li class="col4">
                     <a href="" >
-                        <h4 class="cate_tit">title</h4>
-                        <p class="lst_com">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, molestias!</p>
+                        <h4 class="cate_tit">${title_01}</h4>
+                        <p class="lst_com">${content_01}</p>
                         <span class="go">이동하기</span> 
                     </a>
                 </li>
                 <li class="col4">
                     <a href="">
-                        <h4 class="cate_tit">title</h4>
-                        <p class="lst_com">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, natus!</p>
+                        <h4 class="cate_tit">${title_02}</h4>
+                        <p class="lst_com">${content_02}</p>
                         <span class="go">이동하기</span> 
                    </a>
                 </li>
                 <li class="col4">
                     <a href="" >
-                        <h4 class="cate_tit">title</h4>
-                        <p class="lst_com">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, alias?</p>
+                        <h4 class="cate_tit">${title_03}</h4>
+                        <p class="lst_com">${content_03}</p>
                         <span class="go">이동하기</span> 
                     </a>
                 </li>

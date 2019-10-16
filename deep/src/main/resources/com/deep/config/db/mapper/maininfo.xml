@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MAININFO">
+
+
+	
+	<select id="MAININFO_LIST" resultType="MainInfoVo">
+		
+		SELECT MAININFO_UID,
+			   PICTURE_NAME_01,
+			   PICTURE_PATH_01,
+			   PICTURE_NAME_02,
+			   PICTURE_PATH_02,
+			   PICTURE_NAME_03,
+			   PICTURE_PATH_03,
+			   AREA01_TITLE,
+			   AREA01_CONTENTS,
+			   AREA01_LINK,
+			   AREA02_TITLE,
+			   AREA02_CONTENTS,
+			   AREA02_LINK,
+			   AREA03_TITLE,
+			   AREA03_CONTENTS,
+			   AREA03_LINK
+		
+		FROM MAININFO
+		 
+	</select>
+	
+	
+
+	
+	
+
+</mapper>

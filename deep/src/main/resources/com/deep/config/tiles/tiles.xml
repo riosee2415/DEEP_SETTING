@@ -38,8 +38,10 @@
         </definition>
         
          <!-- FREEBOARD -->
-         <definition name="freeBoard" extends="layout">
-           <put-attribute name="content" value="/WEB-INF/views/board/freeBoard.jsp"/>
+
+        
+        <definition name="main" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/dashboard/main.jsp"/>
         </definition>
         
          <!-- BOARDWRITE -->

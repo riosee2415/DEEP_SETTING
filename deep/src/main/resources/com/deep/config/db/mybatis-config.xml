@@ -9,11 +9,13 @@
 		   	<typeAlias  alias="commonVO" type="com.deep.common.CommonVO"/>
 		   	<typeAlias  alias="boardVO" type="com.deep.board.BoardVO"/>
 		   	<typeAlias  alias="logoVO" type="com.deep.dashboard.LogoVO"/>
+		   	<typeAlias  alias="MainInfoVo" type="com.deep.maininfo.MainInfoVo"/>
 	  </typeAliases>
 	  <mappers>
 	  		<mapper resource="com/deep/config/db/mapper/test.xml"/>
 	  		<mapper resource="com/deep/config/db/mapper/user.xml"/>
 	  		<mapper resource="com/deep/config/db/mapper/common.xml"/>
 	  		<mapper resource="com/deep/config/db/mapper/board.xml"/>
+	  		<mapper resource="com/deep/config/db/mapper/maininfo.xml"/>
 	  </mappers> 
 </configuration>

@@ -90,6 +90,7 @@ public class BoardController {
 		
 		List<BoardVO> list = bService.getBoardList(param);
 		
+		
 		int pageSize = bService.getBoardCount(param);
 		pageSize = (pageSize % pVO.getPageLimit() > 0) ? pageSize / pVO.getPageLimit() + 1 : pageSize / pVO.getPageLimit(); 
 		
@@ -201,7 +202,7 @@ public class BoardController {
 	 * @Author : DEV_YUN
 	 * @return : writeAction (tiles)
 	 * @description : Insert Database Action
-	 */
+	 */ 
 	@RequestMapping(path = "/writeAction", method=RequestMethod.POST)
 	public String writeAction(	Model model
 								,@RequestParam("write_boardType")String boardType
