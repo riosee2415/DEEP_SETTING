@@ -2,63 +2,39 @@
   box-sizing: border-box;
 }
 
+body {
 
-.info input {
-  border: none;
-  background: transparent;
-  border-bottom: 1px solid black;
 }
 
-.info select {
-	width: 30%;
+.userInfo {
+	overflow: auto;
 }
 
-.info {
-  margin-left: 200px;
-  margin-right: 300px;
+.userInfo form {
+	display: block;
+	overflow: auto;
+	width: 120%;
+	height: 100%;
+	margin: 0 auto;
+	margin-left: 45%;
 }
 
-.user {
-  display: flex;
-  justify-content: space-around;
-  align-items: ;
-  margin-left: 70px;
-  font-weight: bold;
+ul {
+	display: block;
+	margin-bottom: 20px;
 }
 
-.user__column {
-  display: flex;
-  width: 50%;
-  padding-top: 15px;
+.userInfo .userInfo__text{
+	width: 320px;
+	height: 25px;
+	padding: 8px;
+	text-align: center;
+	vertical-align: middle;
 }
 
-.user__column .user__column-data {
-  width: 100px;
-  height: 35px;
-  margin-left: 40px;
-  margin-right: 50px;
-  line-height: 35px;
-  text-align: center;
-  color: #636e72;
-}
-
-.user__column .user__column-add {
-	width: 80%;
-	margin-left: 18px;
-}
-
-.btnArea {
-	margin-top: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-form .saveUser{
-	border: none;
-	background-color: #74b9ff;
-	color: white;
-	margin-top: 30px;
-	padding: 10px 40px;
-	border-radius: 5px;
+.userInfo ul li input,
+.userInfo ul li select {
+	width: 350px;
+	height: 30px;
+	border-radius: 
 }

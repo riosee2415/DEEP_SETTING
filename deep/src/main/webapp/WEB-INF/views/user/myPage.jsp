@@ -6,109 +6,62 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/myPage.css" />
 
-<div class="info">
-	<form id="frm1"
-		action="${pageContext.request.contextPath }/user/updateUserInfo"
-		method="POST">
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">ID</div>
-				<input type="text" id="userId" name="userId" value="${userId}"
-					readonly />
-			</div>
-
-			<div class="user__column">
-				<div class="user__column-data">NAME</div>
-				<input type="text" id="userName" name="userName" value="${userName}" />
-			</div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">PASSWORD</div>
-				<input type="password" id="userPass" name="userPass"
-					value="${userPass}" readonly />
-			</div>
-
-			<div class="user__column">
-				<div class="user__column-data">SCHOOL</div>
-				<select id="userSchool" name="userSchool">
-					<c:forEach items="${SC001}" var="CODE">
-						<option value="${CODE.code}">${CODE.data}</option>
-					</c:forEach>
-				</select>
-			</div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">MOBILE</div>
-				<input type="text" id="userMobile" name="userMobile"
-					value="${userMobile}" />
-			</div>
-
-			<div class="user__column">
-				<div class="user__column-data">BIRTH</div>
-				<input type="date" id="userBirth" name="userBirth"
-					value="${userBirth}" />
-			</div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">YEAR</div>
+<div class="userInfo">
+	<form id="frm1" action="${pageContext.request.contextPath }/user/updateUserInfo" method="POST">
+		<ul>
+			<li><div class="userInfo__text">ID</div></li>
+			<li><input type="text" id="userId" name="userId" value="${userId}" readonly /></li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">NAME</div></li>
+			<li><input type="text" id="userName" name="userName" value="${userName}" readonly/></li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">MOBILE</div></li>
+			<li><input type="text" id="userMobile" name="userMobile" value="${userMobile}" /></li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">CLASS YEAR</div></li>
+			<li>
 				<select id="userYear" name="userYear">
 					<option value="1">1학년</option>
 					<option value="2">2학년</option>
 					<option value="3">3학년</option>
 				</select>
-			</div>
-
-			<div class="user__column">
-				<div class="user__column-data">EMAIL</div>
-				<input type="email" id="userEmail" name="userEmail"
-					value="${userEmail}" />
-			</div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">ZIPCODE</div>
-				<input type="text" id="userZipcode" name="userZipcode"
-					value="${userZipcode}" />
-				<button type="button" class="btn btn-default" onclick="addAPI()">
-					검색</button>
-			</div>
-
-			<div class="user__column"></div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">ADDRESS</div>
-				<input class="user__column-add" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" />
-			</div>
-
-			<div class="user__column"></div>
-		</div>
-
-		<div class="user">
-			<div class="user__column">
-				<div class="user__column-data">ADDRESS_2</div>
-				<input class="user__column-add" type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
-			</div>
-
-			<div class="user__column"></div>
-		</div>
-
-		<div class="btnArea">
-			<button type="button" class="saveUser" onclick="updateBtn()">
-				확인</button>
-		</div>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">BRITHDAY</div></li>
+			<li><input type="email" id="userEmail" name="userEmail"	value="${userEmail}" /></li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">ZIPCODE</div></li>
+			<li><input type="text" id="userZipcode" name="userZipcode" value="${userZipcode}" />
+				<button type="button" class="btn btn-default" onclick="addAPI()">SERACH</button>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">ADDRESS</div></li>
+			<li><input class="user__column-add" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" /></li>
+		</ul>
+		
+		<ul>
+			<li><div class="userInfo__text">DETAIL_ADDRESS</div></li>
+			<li><input class="user__column-add" type="text" id="userAdd2" name="userAdd2" value="${userAdd2}" />
+		</ul>
+		
+		<ul>
+			<li><button type="button" class="saveUser" onclick="updateBtn()">확인</button></li>
+		</ul>
 	</form>
 </div>
-
-<!-- //==================================== -->
+		
 
 <script>
 	$(document).ready(function() {

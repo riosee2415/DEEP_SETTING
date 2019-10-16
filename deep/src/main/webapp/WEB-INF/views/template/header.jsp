@@ -81,6 +81,9 @@
                 <li><a href="#">Gallery</a></li>
               </ul>
             </li>
+            <c:if test="${userSchool == 99 }" >
+            	<li><a href="${pageContext.request.contextPath }/">ADMIN MODE</a></li>
+          	</c:if>
           </ul>
           <!-- <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
