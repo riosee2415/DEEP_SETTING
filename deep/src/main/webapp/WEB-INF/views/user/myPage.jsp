@@ -24,31 +24,20 @@
 		</ul>
 		
 		<ul>
-			<li><div class="userInfo__text">CLASS YEAR</div></li>
-			<li>
-				<select id="userYear" name="userYear">
-					<option value="1">1학년</option>
-					<option value="2">2학년</option>
-					<option value="3">3학년</option>
-				</select>
-			</li>
-		</ul>
-		
-		<ul>
 			<li><div class="userInfo__text">BRITHDAY</div></li>
 			<li><input type="email" id="userEmail" name="userEmail"	value="${userEmail}" /></li>
 		</ul>
 		
 		<ul>
 			<li><div class="userInfo__text">ZIPCODE</div></li>
-			<li><input type="text" id="userZipcode" name="userZipcode" value="${userZipcode}" />
-				<button type="button" class="btn btn-default" onclick="addAPI()">SERACH</button>
+			<li><input type="text" id="userZipcode" name="userZipcode" value="${userZipcode}" readonly/>
+				<button type="button" class="searchbtn" onclick="addAPI()">SERACH</button>
 			</li>
 		</ul>
 		
 		<ul>
 			<li><div class="userInfo__text">ADDRESS</div></li>
-			<li><input class="user__column-add" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" /></li>
+			<li><input class="user__column-add" type="text" id="userAdd1" name="userAdd1" value="${userAdd1}" readonly/></li>
 		</ul>
 		
 		<ul>
@@ -57,9 +46,13 @@
 		</ul>
 		
 		<ul>
-			<li><button type="button" class="saveUser" onclick="updateBtn()">확인</button></li>
+			<li>
+				<button type="button" class="saveBtn" onclick="updateBtn()">확인</button>
+				<button type="button" class="changePass-btn" onclick="">비밀번호 변경</button>
+			</li>
 		</ul>
 	</form>
+		
 </div>
 		
 
