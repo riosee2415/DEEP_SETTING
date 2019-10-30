@@ -12,7 +12,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
+	<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    />
     <title>Signin Template for Bootstrap</title>
     
     <script
@@ -82,7 +85,7 @@
               </ul>
             </li>
             <c:if test="${userSchool == 99 }" >
-            	<li><a href="${pageContext.request.contextPath }/">ADMIN MODE</a></li>
+            	<li><a href="${pageContext.request.contextPath }/homeUpdate/homeUpdateList">ADMIN MODE</a></li>
           	</c:if>
           </ul>
           <!-- <form class="navbar-form navbar-left" role="search">

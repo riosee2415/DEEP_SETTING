@@ -7,70 +7,81 @@
 body {
 	background-color: #ffffff;
 }
-
-.subejct-list {
+.subject-list__title{
+	font-size:30px;
+	font-weight:bold;
+	text-align:center;
+	margin-bottom:5%;
+}
+.subject-list {
 	display: flex;
-	margin : 5px 15% 5px 15%;
+	width:100%;
+	height:100%;
+	margin : 0 20%;
 	color:white;
 }
 
-.subejct-list .subejct-list__box{
+.subject-list .subject-list__box{
 	border:none;
 	color: gey;
-	width: 500px;	
-	height: 300px;
-	background-color: #9980FA;
+	width: 400px;	
+	height: 400px;
+	background-color: rgb(65, 116, 255);
 	margin: 10px 50px 10px 50px;
 	box-shadow: 3px 5px 4px 3px rgba(0, 0, 0, 0.44);
 	opacity: 0.7;
 }
 
-.box {
-	display: flex;
-}
-
-.box .subejct-list__avatar{
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+.box .subject-list__avatar{
+	
 	background-color: white;
-	width: 190px;
+	width: 500px;
+	height:150px;
 	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.24);
 }
 
-.subejct-list .subejct-list__description {
-	margin-top: 20px;
-	margin-left: 15px;	
+.subject-list .subject-list__description {
+	margin-left:5%;
+	font-size:18px;
+	overflow:hidden;
 }
 
-.subejct-list .content .box__title {
+.subject-list .content .box__title {
 	font-size: 22px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid white; 
+	margin:8% 2%;
+	font-weight:bold;
 }
-
+.box__content-1, .box__content-2{
+	line-height:24px;
+}
 @keyframes mouseHover {
     from {
-    	opacity: 0.3;
+    	opacity: 0.7;
     }
     to {
+    	background-color:rgb(0, 68, 255);
+    	color:#fff;
     	opacity: 1;
     }
 }
 
-.subejct-list .box .detail_btn {
-    margin-top: 165px;
-    margin-right: 40px;
+.subject-list .detail_btn {
+	float:right;
+	margin-right:6%;
+    margin-top:18%;
     padding: 6px 10px;
     color: #718093;
     cursor: pointer;
+    font-size:16px;
+    width: 180px;
+    height:30px;
     background-color: white;
     border-radius: 18px;
     font-weight: bold;
-    box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.24);
+    box-shadow: 3px 2px 4px 2px rgba(0, 0, 0, 0.24);
 }
 
-.subejct-list .box .detail_btn:hover {
+.subject-list .box .detail_btn:hover {
 	outline: black;
 	animation: mouseHover 1s ease-out forwards;
 }
