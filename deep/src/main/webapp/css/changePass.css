@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.row .col-md-8 {
+	margin: 0 auto;
+}
+
+.row .col-md-8 .title{
+	width : 100%;
+	padding: 20px 60px;
+	text-align: center;
+	font-size : 32px;
+	opacity : 0.8;
+	border-bottom : 1px solid white;
+	margin: 0 auto;
+	
+
+}
+
+.row .col-md-8 .pass-area,
+.row .col-md-8 .btn-area{
+	margin-top : 20px;
+	padding : 20px 40px;
+	text-align : center;
+}
+
+
+
+
+.row .col-md-8 .pass-area .passInput{
+	width : 500px;
+	height : 40px;
+	border: none;
+	border-radius: 30px;
+	padding-left: 20px;
+	padding-top : 5px;
+	box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.24);
+}
+
+.row .col-md-8 .btn-area .subBtn {
+	width : 320px;
+	height : 30px;
+	border: none;
+	padding: 5px 15px;
+	background-color: #0b0b0b;
+	color:white;
+	border-radius: 15px;
+	font-weight: bold;
+	box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.24);
+}
