@@ -47,7 +47,7 @@
     <![endif]-->
     
     <style>
-    .navbar-brand{background-image:url("${pageContext.request.contextPath }/img/4leaf.png"); width:130px; height:50px; z-index:99; margin-left:20px;}
+    .navbar-brand{background-image:url("${pageContext.request.contextPath }/img/logo140x50.png"); width:130px; height:50px; z-index:99; margin-left:20px;}
     </style>
     
   </head>

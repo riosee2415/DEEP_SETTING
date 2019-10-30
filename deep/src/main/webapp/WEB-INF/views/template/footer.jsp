@@ -20,7 +20,7 @@ a, button {border:0; outline:0;}
 .fnb li a:after { content:"|"; padding-left: 20px; }  
 .fnb li a.last:after { content:""; }
 .copyright { float:right; line-height: 70px; padding-right: 24px; }
-a .ft_logo{ background-image:url("${pageContext.request.contextPath }/img/logo140x50.png"); width:150px; height:50px; z-index:99; margin-left:20px;}
+a.ft_logo{background-image:url("${pageContext.request.contextPath }/img/logo140x50.png"); width:130px; height:50px; z-index:99; margin-left:20px;}
 </style> 
 
    <footer id="ft">
@@ -30,8 +30,10 @@ a .ft_logo{ background-image:url("${pageContext.request.contextPath }/img/logo14
         <li><a href="">come on</a></li>
         <li><a href="" class="last"></a></li>
     </ul>
+    <div class="ft">
     <p class="copyright">@2019 kHJ All Right Reserved.</p>
-    <a class="ft_logo"></a>
+    <a href=""><img alt="${pageContext.request.contextPath }/img/4leaf.png" src=""></a>
+    </div>
 </footer>
 
   </body>
