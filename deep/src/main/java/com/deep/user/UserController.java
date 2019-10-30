@@ -103,5 +103,17 @@ public class UserController {
 
 		return myPage(model);
 	}
+	
+	@RequestMapping("/changePassword")
+	public String changePassword(@RequestParam("userId")String userId) {
+		
+		logger.debug("USER ID  : {}", userId);
+		logger.debug("USER ID  : {}", userId);
+		logger.debug("USER ID  : {}", userId);
+		logger.debug("USER ID  : {}", userId);
+		logger.debug("USER ID  : {}", userId);
+		
+		return "changePassword";
+	}
 
 }

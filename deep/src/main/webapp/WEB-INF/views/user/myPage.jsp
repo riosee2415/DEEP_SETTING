@@ -48,9 +48,13 @@
 		<ul>
 			<li>
 				<button type="button" class="saveBtn" onclick="updateBtn()">확인</button>
-				<button type="button" class="changePass-btn" onclick="">비밀번호 변경</button>
+				<button type="button" class="changePass-btn" onclick="changePassword()">비밀번호 변경</button>
 			</li>
 		</ul>
+	</form>
+	
+	<form id="frm2" action="${pageContext.request.contextPath }/user/changePassword" method="post">
+		<input type="hidden" name="userId" value="${userId }" />
 	</form>
 		
 </div>
@@ -117,4 +121,11 @@
 			}
 		}).open();
 	}
+	
+	// movePage Change Password
+	function changePassword() {
+		$("#frm2").submit();
+	}
+	
+	
 </script>

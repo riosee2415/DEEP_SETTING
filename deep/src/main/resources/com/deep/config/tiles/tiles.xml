@@ -54,4 +54,11 @@
          <definition name="issueBoard" extends="layout">
            <put-attribute name="content" value="/WEB-INF/views/board/issueBoard.jsp"/>
         </definition>
+        
+        
+        <!-- CHANGEPASSWORD -->
+         <definition name="changePassword" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/user/changePassword.jsp"/>
+        </definition>
+        
 </tiles-definitions>
