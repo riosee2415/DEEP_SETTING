@@ -17,36 +17,32 @@ body {
 .subejct-list .subejct-list__box{
 	border:none;
 	color: gey;
-	width: 500px;	
-	height: 300px;
+	width: 400px;	
+	height: 400px;
 	background-color: #9980FA;
 	margin: 10px 50px 10px 50px;
 	box-shadow: 3px 5px 4px 3px rgba(0, 0, 0, 0.44);
 	opacity: 0.7;
 }
 
-.box {
-	display: flex;
-}
 
 .box .subejct-list__avatar{
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-bottom: 10px;
+	
 	background-color: white;
-	width: 190px;
+	width: 500px;
+	height:150px;
 	box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.24);
 }
 
 .subejct-list .subejct-list__description {
-	margin-top: 20px;
-	margin-left: 15px;	
+	margin-left:5%;
+	font-size:18px;
 }
 
 .subejct-list .content .box__title {
 	font-size: 22px;
-	margin-bottom: 20px;
-	border-bottom: 1px solid white; 
+	margin:6% 0;
+	font-weight:bold;
 }
 
 @keyframes mouseHover {
@@ -58,12 +54,15 @@ body {
     }
 }
 
-.subejct-list .box .detail_btn {
-    margin-top: 165px;
-    margin-right: 40px;
+.subejct-list .detail_btn {
+	float:right;
+	margin-right:5%;
+    margin-top:16%;
     padding: 6px 10px;
     color: #718093;
     cursor: pointer;
+    width: 100px;
+    height:50px;
     background-color: white;
     border-radius: 18px;
     font-weight: bold;
