@@ -10,6 +10,12 @@ public class HomeUpdateController {
 	 
 	@RequestMapping("/homeUpdateList")
 	public String homeUpdateList() {
+		
 		return "homeUpdateList";
+	}
+	
+	@RequestMapping(value="/mainUpdate")
+	public String mainUpdate() {
+		return "mainUpdate"; 
 	}
 }

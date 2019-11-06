@@ -61,4 +61,9 @@
            <put-attribute name="content" value="/WEB-INF/views/user/changePassword.jsp"/>
         </definition>
         
+        <!-- ADMINUPDATE -->
+         <definition name="homeUpdateList" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/homeUpdate/homeUpdateList.jsp"/>
+        </definition>
+        
 </tiles-definitions>
