@@ -68,7 +68,7 @@
         
         <!-- FREEBOARD -->
           <definition name="freeBoard" extends="layout">
-           <put-attribute name="content" value="/WEB-INF/views/board/issueBoard.jsp"/>
+           <put-attribute name="content" value="/WEB-INF/views/board/freeBoard.jsp"/>
         </definition>
         
 </tiles-definitions>
