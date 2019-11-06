@@ -66,4 +66,9 @@
            <put-attribute name="content" value="/WEB-INF/views/homeUpdate/homeUpdateList.jsp"/>
         </definition>
         
+        <!-- FREEBOARD -->
+          <definition name="freeBoard" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/board/issueBoard.jsp"/>
+        </definition>
+        
 </tiles-definitions>

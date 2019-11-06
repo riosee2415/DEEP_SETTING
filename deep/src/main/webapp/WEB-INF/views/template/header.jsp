@@ -76,8 +76,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="${pageContext.request.contextPath }/user/myPage">MyPage</a></li>
             <li><a href="${pageContext.request.contextPath }/subject/subjectList">Subject</a></li>
-            <li><a href="${pageContext.request.contextPath }/subject/subjectList">FreeBoard</a></li>
-            <li><a href="${pageContext.request.contextPath }/subject/subjectList">Issue</a></li>
+            <li><a href="${pageContext.request.contextPath }/board/freeBoard?page=1">FreeBoard</a></li>
+            <li><a href="${pageContext.request.contextPath }/board/issueBoard?page=1">Issue</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Community<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
