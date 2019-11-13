@@ -69,6 +69,11 @@
     	vertical-align: middle;
     	font-size: 12px;
     }
+    
+    .userName{
+    	cursor: pointer;
+    	font-weight: bold;
+    }
     </style>
     
   </head>
@@ -92,7 +97,6 @@
           	<li><a class="navbar-brand" href="${pageContext.request.contextPath }/login/dashboard" ></a></li>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="${pageContext.request.contextPath }/user/myPage">MyPage</a></li>
             <li><a href="${pageContext.request.contextPath }/subject/subjectList">Subject</a></li>
             <li><a href="${pageContext.request.contextPath }/board/freeBoard?page=1">FreeBoard</a></li>
             <li><a href="${pageContext.request.contextPath }/board/issueBoard?page=1">Issue</a></li>
@@ -111,7 +115,7 @@
           	<br />
           	<c:if test="${ !empty  userName}">  
             	<c:if test="${userSchool == 99}"><span class="admin-mode">admin</span></c:if>
-					${userName} 님 환영합니다. &nbsp; &nbsp; <span id="singOut" class="signOut"> -SIGN OUT- </span>
+					<span id="userName"class="userName">${userName}</span> 님 환영합니다. &nbsp; &nbsp; <span id="singOut" class="signOut"> SIGN OUT </span>
             </c:if>
           </ul>
         </div><!--/.nav-collapse -->
@@ -135,12 +139,14 @@
 
 	});
 	
-	// Write Modal Open
-	function writeBtn()
-	{
-		
+	function move_myPage(){
+		location.href = "${pageContext.request.contextPath }/user/myPage";
 	}
-
+	
+	const userName = document.getElementById("userName");
+	
+	userName.addEventListener("click", move_myPage);
+	
 </script>
    
 
