@@ -14,25 +14,26 @@ ul {list-style:none;}
 a, button {border:0; outline:0;}
 
 #ft {  position:absolute; bottom:0; width:100%; height:70px; background:#333; color:#fff; overflow-y: hidden;}   
-.fnb { float:left; margin-left: 20px;  }
-.fnb li { float:left; padding:10px; }  
-.fnb li a { color:#fff; display:block; line-height:70px; } 
+.fnb { float:left; margin-left: 20%;  }
+.fnb li { float:left;  padding:10px;}  
+.fnb li a { color:#fff; display:block; line-height:60px; } 
 .fnb li a:after { content:"|"; padding-left: 20px; }  
 .fnb li a.last:after { content:""; }
-.copyright { float:right; line-height: 70px; padding-right: 24px; }
-a.ft_logo{background-image:url("${pageContext.request.contextPath }/img/logo140x50.png"); width:130px; height:50px; z-index:99; margin-left:20px;}
+.copyright { float:right; line-height: 70px; padding-right: 20%; }
+a img{display:block; float:left; margin-left:10%; margin-top:15px;}
 </style> 
 
    <footer id="ft">
+    <a href=""><img alt="footer_logo" src="${pageContext.request.contextPath }/img/logo130x50white.png"></a>
     <ul class="fnb">
         <li><a href="">map</a></li>
         <li><a href="">phone</a></li>
         <li><a href="">come on</a></li>
-        <li><a href="" class="last"></a></li>
+        <li><a href="" class="last">shala</a></li>
     </ul>
     <div class="ft">
-    <p class="copyright">@2019 kHJ All Right Reserved.</p>
-    <a href=""><img alt="${pageContext.request.contextPath }/img/4leaf.png" src=""></a>
+    <p class="copyright">@2019 4LEAF All Right Reserved.</p>
+   
     </div>
 </footer>
 
