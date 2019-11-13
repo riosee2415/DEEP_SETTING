@@ -51,6 +51,24 @@
     
     <style>
     .navbar-brand{background-image:url("${pageContext.request.contextPath }/img/logo140x50.png"); width:130px; height:50px; z-index:99; margin-left:20px;}
+    
+    .admin-mode{
+    	padding: 2px 8px;
+    	background-color: #e74c3c;
+    	color: #ffffff;
+    	border-radius : 15px;
+    	vertical-align: middle;
+    	font-size: 12px;
+    }
+    
+    .signOut {
+    	padding: 2px 8px;
+    	background-color: #ecf0f1;
+    	color: #2c3e50;
+    	border-radius : 5px;
+    	vertical-align: middle;
+    	font-size: 12px;
+    }
     </style>
     
   </head>
@@ -92,8 +110,8 @@
           <ul class="nav navbar-nav navbar-right">
           	<br />
           	<c:if test="${ !empty  userName}">  
-            	<c:if test="${userSchool == 99}"><font color="#FF0000">[관리자]</font></c:if>
-					${userName} 님 환영합니다. &nbsp; &nbsp; <span id="singOut"> -SIGN OUT- </span>
+            	<c:if test="${userSchool == 99}"><span class="admin-mode">admin</span></c:if>
+					${userName} 님 환영합니다. &nbsp; &nbsp; <span id="singOut" class="signOut"> -SIGN OUT- </span>
             </c:if>
           </ul>
         </div><!--/.nav-collapse -->
