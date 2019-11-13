@@ -62,6 +62,7 @@
     }
     
     .signOut {
+    	cursor: pointer;
     	padding: 2px 8px;
     	background-color: #ecf0f1;
     	color: #2c3e50;
@@ -70,9 +71,18 @@
     	font-size: 12px;
     }
     
+    .signOut:hover {
+    	background-color: #2c3e50;
+    	color: #ecf0f1;
+    }
+    
     .userName{
     	cursor: pointer;
     	font-weight: bold;
+    }
+    
+    .admin-menu{
+    	color : #e74c3c;
     }
     </style>
     
@@ -95,14 +105,13 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
           	<li><a class="navbar-brand" href="${pageContext.request.contextPath }/login/dashboard" ></a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="${pageContext.request.contextPath }/attendance/attendanceScreen">Attendance</a></li>
             <li><a href="${pageContext.request.contextPath }/subject/subjectList">Subject</a></li>
             <li><a href="${pageContext.request.contextPath }/board/freeBoard?page=1">FreeBoard</a></li>
             <li><a href="${pageContext.request.contextPath }/board/issueBoard?page=1">Issue</a></li>
             
             <c:if test="${userSchool == 99 }" >
-            	<li><a href="${pageContext.request.contextPath }/homeUpdate/homeUpdateList">ADMIN MODE</a></li>
+            	<li><a href="${pageContext.request.contextPath }/homeUpdate/homeUpdateList"><span class="admin-menu">ADMIN MODE</span></a></li>
           	</c:if>
           </ul>
           <!-- <form class="navbar-form navbar-left" role="search">

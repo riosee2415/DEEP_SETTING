@@ -71,4 +71,9 @@
            <put-attribute name="content" value="/WEB-INF/views/board/freeBoard.jsp"/>
         </definition>
         
+        <!-- ATTENDANCE -->
+          <definition name="attendanceScreen" extends="layout">
+           <put-attribute name="content" value="/WEB-INF/views/attendance/attendance.jsp"/>
+        </definition>
+        
 </tiles-definitions>
